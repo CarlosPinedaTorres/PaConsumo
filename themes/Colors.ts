@@ -8,3 +8,6 @@ export const Colors={
     celadonOscuro:"#85CC9C",
     verde:'C5E8FB'
  } as  const 
+ } as const 
+
+ export default Colors;

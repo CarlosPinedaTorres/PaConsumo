@@ -14,14 +14,14 @@ const index = () => {
     fillShadowGradient:Colors.azulOscuro,
     fillShadowGradientOpacity: 1, 
     strokeWidth: 2,
-    barPercentage: 1.0,
-    decimalPlaces: 2,
+    barPercentage:0.5,
+    decimalPlaces: 1,
   };
   const data = {
     labels: ["08:00", "08:05", "08:10", "08:15", "08:20", "08:25", "08:30", "08:35", "08:40", "08:45", "08:50", "08:55"],
     datasets: [
       {
-        data: [120, 135, 150, 140, 155, 160, 145, 130, 125, 140, 150, 160] // Consumo en vatios
+        data: [120, 135, 150, 140, 155, 160, 145, 130, 125, 140, 150, 160] 
       }
     ]
   };
@@ -30,8 +30,8 @@ const index = () => {
     <View style={styles.contenedorGrafico}>
     <BarChart
     data={data}
-    width={screenWidth}
-    height={220}
+    width={screenWidth-10}
+    height={230}
     yAxisLabel=""
     yAxisSuffix='W'
     chartConfig={chartConfig}
