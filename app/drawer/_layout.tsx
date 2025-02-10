@@ -7,7 +7,7 @@ import Colors from '@/themes/Colors'
 
 const _layout = () => {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: Colors.negro, headerStyle:{backgroundColor: Colors.azulClaro}  ,tabBarInactiveTintColor: Colors.azulOscuro, tabBarStyle: {backgroundColor: Colors.azulClaro} }}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: Colors.negro, headerStyle:{backgroundColor: Colors.azulClaro, height: 50}  ,tabBarInactiveTintColor: Colors.azulOscuro, tabBarStyle: {backgroundColor: Colors.azulClaro} }}>
     <Tabs.Screen
       name="index"
       options={{
