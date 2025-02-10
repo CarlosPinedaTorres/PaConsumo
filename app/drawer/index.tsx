@@ -33,7 +33,7 @@ const index = () => {
       <BarChart
         data={data}
         width={screenWidth * 0.95} 
-        height={250} 
+        height={240} 
         yAxisLabel=""
         yAxisSuffix="W"
         chartConfig={chartConfig}
@@ -49,8 +49,9 @@ const styles = StyleSheet.create({
   contenedorGrafico: {
     alignItems: "center",
     justifyContent: "center",
-    marginVertical: 10,
-    paddingHorizontal: 10,
+    marginBottom: 15, 
+    marginTop:10
+
   },
 });
 export default index
