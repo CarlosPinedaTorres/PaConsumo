@@ -1,4 +1,4 @@
-const Colors={
+export const Colors={
     fondo:'#FDF9F9',
     negro:'#1A1818',
     azulOscuro:'#2B9EB3',
