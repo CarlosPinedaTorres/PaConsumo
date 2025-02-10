@@ -6,4 +6,5 @@ export const Colors={
     celadonClaro:"#BCD9A0",
     nyanza:"#FAFAD7",
     celadonOscuro:"#85CC9C",
+    verde:'C5E8FB'
  } as  const 
