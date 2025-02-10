@@ -3,11 +3,13 @@ import {Drawer} from 'expo-router/drawer'
 import React from 'react'
 import { Tabs } from 'expo-router'
 import { Ionicons } from '@expo/vector-icons'
+import Colors from '@/themes/Colors'
+
 
 
 const _layout = () => {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: "#2B9EB3", tabBarInactiveTintColor: "#2B9EB3", tabBarStyle: {backgroundColor: "#2B9EB3"} }}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: Colors.negro  ,tabBarInactiveTintColor: Colors.azulOscuro, tabBarStyle: {backgroundColor: Colors.azulClaro} }}>
       <Tabs.Screen
         name="index"
         options={{
