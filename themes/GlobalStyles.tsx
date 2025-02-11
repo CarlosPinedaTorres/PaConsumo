@@ -29,6 +29,10 @@ input_form_box:{
 input_form_text:{
     color: Colors.negro,
     marginVertical:-5
+},
+textoCabeceraTab:{
+    fontFamily: "Interbold",
+    fontSize: 16
 }
 
 })
