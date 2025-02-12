@@ -31,8 +31,14 @@ input_form_text:{
     marginVertical:-5
 },
 textoCabeceraTab:{
-    fontFamily: "Interbold",
-    fontSize: 16
+    fontFamily: "InterExtraBolder",
+    fontSize: 14,
+    color: Colors.fondo
+},
+textoCabecera:{
+    fontFamily: "InterExtraBolder",
+    fontSize: 18,
+    color: Colors.fondo
 }
 
 })

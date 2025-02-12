@@ -8,22 +8,22 @@ import GlobalStyles from '../../themes/GlobalStyles';
 
 const _layout = () => {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: Colors.negro, headerTitleStyle: GlobalStyles.textoCabeceraTab, headerStyle: {backgroundColor: Colors.azulClaro, height: 50}, tabBarInactiveTintColor: Colors.azulOscuro, tabBarStyle: {backgroundColor: Colors.azulClaro} }}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: Colors.negro, headerTitleStyle: GlobalStyles.textoCabecera, headerStyle: {backgroundColor: Colors.azulClaro, height: 50}, tabBarInactiveTintColor: Colors.azulOscuro, tabBarStyle: {backgroundColor: Colors.azulClaro} }}>
     <Tabs.Screen
       name="index"
       options={{
-        title:'Pagina Principal',
+        title:'PaConsumo',
         tabBarLabelStyle: GlobalStyles.textoCabeceraTab,
-        tabBarIcon: ({ color }) => <Ionicons style={{marginLeft: 10}} size={22} name="home-outline" color={color} />,
+        tabBarIcon: ({ color }) => <Ionicons style={{marginLeft: 0}} size={22} name="home-outline" color={Colors.fondo} />,
       }}
     />
  
     <Tabs.Screen
       name="Configuracion"
       options={{
-        title: 'Configuracion',
+        title: 'Configuración',
         tabBarLabelStyle: GlobalStyles.textoCabeceraTab,
-        tabBarIcon: ({ color }) => <Ionicons size={22} name="settings-outline" color={color} />,
+        tabBarIcon: ({ color }) => <Ionicons size={22} name="settings-outline" color={Colors.fondo} />,
       }}
     />
 
@@ -32,18 +32,11 @@ const _layout = () => {
       options={{
         title: 'Administrador',
         tabBarLabelStyle: GlobalStyles.textoCabeceraTab,
-        tabBarIcon: ({ color }) => <Ionicons size={22} name="bug-outline" color={color} />,
+        tabBarIcon: ({ color }) => <Ionicons size={22} name="bug-outline" color={Colors.fondo} />,
       }}
     />
 
-<Tabs.Screen
-      name="Historicos/index"
-      options={{
-        title: 'Historicos',
-        tabBarLabelStyle: GlobalStyles.textoCabeceraTab,
-        tabBarIcon: ({ color }) => <Ionicons size={22} name="document-outline" color={color} />,
-      }}
-    />
+
     
   </Tabs>
 
