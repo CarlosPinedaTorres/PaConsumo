@@ -10,7 +10,7 @@ containerVerde:{
 
     marginHorizontal:25,
     marginVertical:15,
-    padding:25, 
+    padding:30, 
 },
 input_form_box:{
     backgroundColor:Colors.fondo,
@@ -28,7 +28,8 @@ input_form_box:{
 },
 input_form_text:{
     color: Colors.negro,
-    marginVertical:-5
+    marginVertical:-5,
+    fontFamily:"InterBolder"
 },
 textoCabeceraTab:{
     fontFamily: "InterExtraBolder",
