@@ -10,15 +10,15 @@ const Configuracion = () => {
     <View style={GlobalStyles.containerVerde}>
       <View style={{justifyContent:'space-evenly',flex:1}}>
         {/* <View>
-          <Text style={{fontFamily:"InterBolder"}}>Selecciona el día que deseas configurar</Text>
+          <Text style={GlobalStyles.textoConfiguracion}>Selecciona el día que deseas configurar</Text>
           <Calendar_form nombre='15/01/2025'></Calendar_form>
         </View> */}
         <View>
-          <Text style={{fontFamily:"InterBolder"}}>Inicio</Text>
+          <Text style={GlobalStyles.textoConfiguracion}>Inicio</Text>
           <Time_form nombre="10:00"></Time_form>
         </View>
         <View>
-          <Text style={{fontFamily:"InterBolder"}}>Fin</Text>
+          <Text style={GlobalStyles.textoConfiguracion}>Fin</Text>
           <Time_form nombre='14:00'></Time_form>
         </View>
       </View>
