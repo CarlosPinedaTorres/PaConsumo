@@ -9,16 +9,16 @@ const Configuracion = () => {
   return (
     <View style={GlobalStyles.containerVerde}>
       <View style={{justifyContent:'space-evenly',flex:1}}>
-        <View>
-          <Text>Selecciona el día que deseas configurar</Text>
+        {/* <View>
+          <Text style={{fontFamily:"InterBolder"}}>Selecciona el día que deseas configurar</Text>
           <Calendar_form nombre='15/01/2025'></Calendar_form>
-        </View>
+        </View> */}
         <View>
-          <Text>Inicio</Text>
+          <Text style={{fontFamily:"InterBolder"}}>Inicio</Text>
           <Time_form nombre="10:00"></Time_form>
         </View>
         <View>
-          <Text>Fin</Text>
+          <Text style={{fontFamily:"InterBolder"}}>Fin</Text>
           <Time_form nombre='14:00'></Time_form>
         </View>
       </View>
