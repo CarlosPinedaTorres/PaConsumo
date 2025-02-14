@@ -54,7 +54,7 @@ export default function Calendar_form({nombre}:Props) {
         />
         )}
           <TextInput style={GlobalStyles.input_form_text} value={dia} onChangeText={setDia} editable={false} placeholder={nombre}></TextInput>
-          <Ionicons style={{marginTop:5}} size={20} name="calendar" color={"black"}></Ionicons>
+          <Ionicons style={{marginTop:5}} size={72} name="calendar" color={"black"}></Ionicons>
       </View>
     </Pressable>
       

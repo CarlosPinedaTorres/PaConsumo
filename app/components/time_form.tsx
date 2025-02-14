@@ -1,4 +1,4 @@
-import { Pressable, View } from 'react-native';
+import { Pressable, View, Dimensions } from 'react-native';
 import { GlobalStyles } from "../../themes/GlobalStyles";
 import { TextInput } from "react-native-gesture-handler";
 import React, { useState } from 'react';
@@ -44,6 +44,7 @@ export default function Time_form({nombre}:Props) {
     >
       
       <View style={GlobalStyles.input_form_box}>
+
         {showPicker && (
         <DateTimePicker
         mode='time'
@@ -53,7 +54,7 @@ export default function Time_form({nombre}:Props) {
         />
         )}
           <TextInput style={GlobalStyles.input_form_text} value={hora} onChangeText={setHora} editable={false} placeholder={nombre}></TextInput>
-          <Ionicons style={{marginTop:5}} size={20} name="time" color={"black"}></Ionicons>
+          <Ionicons style={{marginTop:5}} size={72} name="time" color={"black"}></Ionicons>
       </View>
     </Pressable>
   )

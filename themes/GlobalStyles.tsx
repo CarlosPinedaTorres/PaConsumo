@@ -5,31 +5,33 @@ export const GlobalStyles = StyleSheet.create({
 
 containerVerde:{
     flex:1,
-    borderRadius:12,
+    borderRadius:50,
     backgroundColor:Colors.celadonClaro,
 
-    marginHorizontal:25,
-    marginVertical:15,
-    padding:30, 
+    marginHorizontal:150,
+    marginVertical:100,
+    paddingVertical:40, 
+    paddingHorizontal:80
 },
 input_form_box:{
     backgroundColor:Colors.fondo,
     borderColor:Colors.negro,
-    borderWidth:0.5,
-    borderRadius:5,
+    borderWidth:1,
+    borderRadius:15,
 
     flexDirection:'row',
     justifyContent:'space-between',
 
     paddingVertical:0,
-    paddingHorizontal:10,
+    paddingHorizontal:20,
     marginBottom:5
    
 },
 input_form_text:{
     color: Colors.negro,
-    marginVertical:-5,
-    fontFamily:"InterBolder"
+    marginVertical:8,
+    fontFamily:"InterBolder",
+    fontSize:24
 },
 textoCabeceraTab:{
     fontFamily: "InterExtraBolder",
@@ -40,6 +42,11 @@ textoCabecera:{
     fontFamily: "InterExtraBolder",
     fontSize: 20,
     color: Colors.fondo
+},
+textoConfiguracion:{
+    fontFamily:"InterBolder",
+    fontSize:25,
+    marginStart:10
 }
 
 })
