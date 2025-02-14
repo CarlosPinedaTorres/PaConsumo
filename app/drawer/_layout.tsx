@@ -8,7 +8,7 @@ import GlobalStyles from '../../themes/GlobalStyles';
 
 const _layout = () => {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: Colors.negro, headerTitleStyle: GlobalStyles.textoCabecera, headerStyle: {backgroundColor: Colors.azulClaro, height: 50}, tabBarInactiveTintColor: Colors.azulOscuro, tabBarStyle: {backgroundColor: Colors.azulClaro} }}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: Colors.negro, headerTitleStyle: GlobalStyles.textoCabecera, headerStyle: {backgroundColor: Colors.azulClaro, height: 60}, tabBarInactiveTintColor: Colors.azulOscuro, tabBarStyle: {backgroundColor: Colors.azulClaro, height:60} }}>
     <Tabs.Screen
       name="index"
       options={{
