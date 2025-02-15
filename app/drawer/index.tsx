@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput } from 'react-native';
 import { ProgressChart } from 'react-native-chart-kit';
 import { Dimensions } from 'react-native';
+import Colors from '@/themes/Colors';
 
 const Index = () => {
   const [wattValue, setWattValue] = useState(0);
@@ -64,10 +65,10 @@ const Index = () => {
 
               color: (opacity = 1) => 
                 wattValue < 50
-                  ? `rgba(0, 255, 0, ${opacity})`  
-                  : wattValue < 150
-                  ? `rgba(255, 255, 0, ${opacity})` 
-                  : `rgba(255, 0, 0, ${opacity})`,
+              ? `rgba(${Colors.verdeGrafica}, ${opacity})` 
+              : wattValue < 150
+              ? `rgba(${Colors.naranjaGrafica}, ${opacity})` 
+              : `rgba(${Colors.rojoGrafica}, ${opacity})`, 
               style: {
                 borderRadius: 16,
                 shadowColor: "#000",
@@ -86,7 +87,7 @@ const Index = () => {
           <ProgressChart
             data={{
               labels: ['Voltage'],
-              data: [voltageValue / 300]  
+              data: [voltageValue /200]  
             }}
             width={screenWidth / 2 - 40} 
             height={400} 
@@ -99,10 +100,10 @@ const Index = () => {
               decimalPlaces: 2,
               color: (opacity = 1) => 
                 voltageValue < 100
-                  ? `rgba(0, 255, 0, ${opacity})`  
-                  : voltageValue < 200
-                  ? `rgba(255, 255, 0, ${opacity})`  
-                  : `rgba(255, 0, 0, ${opacity})`, 
+              ? `rgba(${Colors.verdeGrafica}, ${opacity})` 
+              : voltageValue < 150
+              ? `rgba(${Colors.naranjaGrafica}, ${opacity})` 
+              : `rgba(${Colors.rojoGrafica}, ${opacity})`, 
               style: {
                 borderRadius: 16,
                 shadowColor: "#000",
