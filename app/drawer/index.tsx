@@ -1,57 +1,48 @@
-import { View, Text ,StyleSheet,Dimensions} from 'react-native'
-import React from 'react'
-import {
-  BarChart,
-} from "react-native-chart-kit";
-import { Colors } from '@/themes/Colors';
-const index = () => {
-  const screenWidth = Dimensions.get("window").width;
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import GaugeComponent from 'react-gauge-component';
 
-  const chartConfig = {
-    backgroundGradientFrom: Colors.celadonClaro,
-    backgroundGradientTo: Colors.celadonClaro,
-    color: (opacity = 1) => `rgba(0, 51, 102, ${opacity})`, 
-    labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`, 
-    fillShadowGradient: Colors.azulOscuro,
-    fillShadowGradientOpacity: 0.8, 
-    strokeWidth: 2,
-    barPercentage: 0.5, 
-    decimalPlaces: 0,
-  };
-
-  const data = {
-    labels: ["08:00", "08:05", "08:10", "08:15", "08:20", "08:25", "08:30", "08:35", "08:40", "08:45", "08:50", "08:55"],
-    datasets: [
-      {
-        data: [120, 135, 150, 140, 155, 160, 145, 130, 125, 140, 150, 160],
-      },
-    ],
-  };
-
+const Index = () => {
   return (
-    <View style={styles.contenedorGrafico}>
-      <BarChart
-        data={data}
-        width={screenWidth * 0.95} 
-        height={240} 
-        yAxisLabel=""
-        yAxisSuffix="W"
-        chartConfig={chartConfig}
-        verticalLabelRotation={5} 
-        showValuesOnTopOfBars={true} 
-        fromZero={true} 
+    <View style={styles.container}>
+      <Text style={styles.title}>Vatios</Text>
+      <GaugeComponent
+        value={120} 
+        minValue={0}
+        maxValue={200}
+        arc={{
+          colorArray: ['#00ff00', '#ffff00', '#ff0000'], 
+          padding: 0.02,
+        }}
+        labels={{
+      
+          tickLabels: {
+            type: 'inner',
+            ticks: [
+              { value: 100 },
+              
+            ],
+          },
+        }}
       />
+
+   
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  contenedorGrafico: {
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: 15, 
-    marginTop:10
-
+  container: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 15,
+    marginTop: 10,
+  },
+  title: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: 5,
   },
 });
-export default index
+
+export default Index;
