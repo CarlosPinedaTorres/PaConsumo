@@ -35,12 +35,12 @@ input_form_text:{
 },
 textoCabeceraTab:{
     fontFamily: "InterExtraBolder",
-    fontSize: 20,
+    fontSize: 24,
     color: Colors.fondo
 },
 textoCabecera:{
     fontFamily: "InterExtraBolder",
-    fontSize: 20,
+    fontSize: 24,
     color: Colors.fondo
 },
 textoConfiguracion:{
