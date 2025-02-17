@@ -5,8 +5,8 @@ import { Dimensions } from 'react-native';
 import Colors from '@/themes/Colors';
 
 const Index = () => {
-  const [wattValue, setWattValue] = useState(0);
-  const [voltageValue, setVoltageValue] = useState(0); 
+  const [wattValue, setWattValue] = useState(150);
+  const [voltageValue, setVoltageValue] = useState(30); 
 
  
   const handleWattChange = (inputValue: any) => {
