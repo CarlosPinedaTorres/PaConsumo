@@ -1,14 +1,30 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TextInput } from 'react-native';
 import { ProgressChart } from 'react-native-chart-kit';
 import { Dimensions } from 'react-native';
 import Colors from '@/themes/Colors';
+import { collection, getDocs, query } from 'firebase/firestore';
+import { db } from '@/Firebaseconfig';
 
 const Index = () => {
+  const coleccionElectricidad=collection(db,'Electricidad')
+  const [data, setData] = useState<any>([])
   const [wattValue, setWattValue] = useState(150);
   const [voltageValue, setVoltageValue] = useState(30); 
 
- 
+
+  useEffect(() => {
+    cargarDatos();
+  }, [])
+  
+  const cargarDatos = async () => {
+      const q = query (coleccionElectricidad);
+      const datos = await getDocs(q);
+      // setData(datos.docs.map((doc) => ({...doc.data(), id: doc.id})));
+      console.log(datos.docs);
+    
+  }
+
   const handleWattChange = (inputValue: any) => {
     const watt = parseInt(inputValue) || 0;
     setWattValue(watt);
