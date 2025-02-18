@@ -8,7 +8,16 @@ import GlobalStyles from '../../themes/GlobalStyles';
 
 const _layout = () => {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: Colors.negro, headerTitleStyle: GlobalStyles.textoCabecera, tabBarLabelStyle: {height: 80}, headerStyle: {backgroundColor: Colors.azulClaro, height: 60}, tabBarInactiveTintColor: Colors.azulOscuro, tabBarStyle: {backgroundColor: Colors.azulClaro, height:60} }}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: Colors.negro,
+      headerRight: () => (
+        <Ionicons
+          name="log-out-outline"
+          size={30}
+          color={Colors.fondo}
+          style={{ marginRight: 15 }}
+        />
+      ),
+    headerTitleStyle: GlobalStyles.textoCabecera, tabBarLabelStyle: {height: 80}, headerStyle: {backgroundColor: Colors.azulClaro, height: 60}, tabBarInactiveTintColor: Colors.azulOscuro, tabBarStyle: {backgroundColor: Colors.azulClaro, height:60} }}>
     <Tabs.Screen
       name="index"
       options={{
