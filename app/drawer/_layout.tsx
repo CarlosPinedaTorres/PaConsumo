@@ -1,12 +1,19 @@
-import { View, Text } from 'react-native'
+import { Pressable, Alert } from 'react-native'
 import {Drawer} from 'expo-router/drawer'
 import React from 'react'
 import { Tabs } from 'expo-router'
 import { Ionicons } from '@expo/vector-icons'
 import Colors from '@/themes/Colors'
 import GlobalStyles from '../../themes/GlobalStyles';
+import { getAuth } from 'firebase/auth'
+import { router } from 'expo-router'
 
 const _layout = () => {
+
+  getAuth().onAuthStateChanged((user) => {
+    if(!user) router.replace("/drawer/Administrador");
+  });
+
   return (
     <Tabs screenOptions={{ tabBarActiveTintColor: Colors.negro,
       
@@ -26,12 +33,19 @@ const _layout = () => {
       options={{
 
         headerRight: () => (
-          <Ionicons
+
+          <Pressable 
+                onPress={() => router.push("/drawer/Administrador")}>
+                <Ionicons
             name="log-out-outline"
             size={30}
             color={Colors.fondo}
             style={{ marginRight: 15 }}
           />
+
+            </Pressable>
+
+          
         ),
         
         title: 'Configuración',
