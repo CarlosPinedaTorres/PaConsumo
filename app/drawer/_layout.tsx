@@ -27,32 +27,6 @@ const _layout = () => {
       }}
     />
  
-    <Tabs.Screen
-    
-      name="Configuracion"
-      options={{
-
-        headerRight: () => (
-
-          <Pressable 
-                onPress={() => router.push("/drawer/Administrador")}>
-                <Ionicons
-            name="log-out-outline"
-            size={30}
-            color={Colors.fondo}
-            style={{ marginRight: 15 }}
-          />
-
-            </Pressable>
-
-          
-        ),
-        
-        title: 'Configuración',
-        tabBarLabelStyle: GlobalStyles.textoCabeceraTab,
-        tabBarIcon: ({ color }) => <Ionicons size={22} name="settings-outline" color={Colors.fondo} />,
-      }}
-    />
 
 <Tabs.Screen
       name="Administrador"
