@@ -25,7 +25,7 @@ const Administrador = () => {
           
         } catch (error:any){
             console.log(error);
-            Alert.alert("Inicio de sesión incorrecto", "error.message")
+            Alert.alert("Inicio de sesión incorrecto", "Credenciales erróneas")
         }
     }
 
