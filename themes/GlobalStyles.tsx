@@ -10,8 +10,12 @@ containerVerde:{
 
     marginHorizontal:150,
     marginVertical:100,
-    paddingVertical:40, 
-    paddingHorizontal:80
+    paddingVertical:80, 
+    paddingHorizontal:80,
+    flexDirection:'row',
+    justifyContent:'space-between',
+
+    
 },
 input_form_box:{
     backgroundColor:Colors.fondo,
@@ -48,6 +52,20 @@ textoConfiguracion:{
     fontFamily:"InterBolder",
     fontSize:20,
     marginStart:10
+},
+containerBotonLuz:{
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    marginStart:75
+},
+botonLuz:{
+    padding: 15,
+    borderRadius: 100,
+    flexDirection: "row",
+    alignItems: "center",
+    borderColor:"black",
+    borderWidth:1,
 }
 
 })

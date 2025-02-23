@@ -9,6 +9,7 @@ import { router } from 'expo-router';
 import { Pressable, ScrollView, TextInput } from 'react-native-gesture-handler'
 import GlobalStyles from '@/themes/GlobalStyles';
 import Time_form from "../components/time_form";
+import Boton_luz from '../components/boton_luz';
 const Administrador = () => {
 
   // user = admin@paconsumo.com  password = paconsumo
@@ -47,18 +48,22 @@ const Administrador = () => {
       
        {currentUser ?(
            <View style={GlobalStyles.containerVerde}>
-               <View style={{justifyContent:'space-evenly',flex:1}}>
-             
-                 <View>
-                   <Text style={GlobalStyles.textoConfiguracion}>Inicio</Text>
-                   <Time_form nombre="10:00"></Time_form>
-                 </View>
-                 <View>
-                   <Text style={GlobalStyles.textoConfiguracion}>Fin</Text>
-                   <Time_form nombre='14:00'></Time_form>
-                 </View>
-               </View>
-             </View>
+           
+              <View style={{flexDirection:'column',justifyContent:'space-evenly',flex:4}}>
+            
+                <View>
+                  <Text style={GlobalStyles.textoConfiguracion}>Inicio</Text>
+                  <Time_form nombre="10:00"></Time_form>
+                </View>
+                <View>
+                  <Text style={GlobalStyles.textoConfiguracion}>Fin</Text>
+                  <Time_form nombre='14:00'></Time_form>
+                </View>
+              </View>
+          
+              <Boton_luz/>
+
+            </View>
              
           ): <View>
           <View style={[{backgroundColor:Colors.azulOscuro}, {width:1000}, {height:510}, {alignSelf:'center'}, {flexDirection:'column'}, {borderRadius:20}, {top:'10%'}]}>
