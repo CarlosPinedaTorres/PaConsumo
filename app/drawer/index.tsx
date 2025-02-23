@@ -79,7 +79,7 @@ const Index = () => {
           <Text style={styles.gaugeLabel}>Voltaje</Text>
           <ProgressChart
             data={{
-              labels: ['Voltage'],
+              labels: ['Voltaje'],
               data: [voltageValue /5000]  
             }}
             width={screenWidth / 2 - 40} 
@@ -137,9 +137,10 @@ const styles = StyleSheet.create({
     marginBottom: 30, 
   },
   gaugeLabel: {
-    fontSize: 18,
+    fontSize: 50,
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginBottom: 30,
+    marginRight:90
   },
   valueLabel: {
     position: 'absolute',
