@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
     fontSize: 50,
     fontWeight: 'bold',
     marginBottom: 30,
-    marginRight:90
+    marginRight:105
   },
   valueLabel: {
     position: 'absolute',
