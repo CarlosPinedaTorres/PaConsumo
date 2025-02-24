@@ -94,7 +94,7 @@ const Index = () => {
               color: (opacity = 1) => 
                 voltageValue < 240
               ? `rgba(${Colors.verdeGrafica}, ${opacity})` 
-              : voltageValue < 240
+              : voltageValue < 260
               ? `rgba(${Colors.naranjaGrafica}, ${opacity})` 
               : `rgba(${Colors.rojoGrafica}, ${opacity})`, 
               style: {
